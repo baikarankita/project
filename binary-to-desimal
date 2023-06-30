@@ -1,0 +1,36 @@
+//Create a program that simulates rolling a pair of dice and displays the result.
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int getDecimal(long long num)
+{
+    int i = 0, decimal= 0;
+    
+    //converting binary to decimal
+    while (num!=0)
+    {
+        int digit = num % 10;
+        decimal += digit * pow(2,i);
+
+        num /= 10;
+        i++;
+    }
+    return decimal;
+}
+
+// main program
+int main()
+{
+    
+    
+    // limit for int 2147483647 (10 digits)
+    long long binary = 11110;
+    
+    cout << getDecimal(binary);   
+    
+    return 0;
+}
